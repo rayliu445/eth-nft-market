@@ -20,17 +20,20 @@
 - Publish your own NFT product (currently limited to images only)
 - Show all NFT assets for sale in the market on the list page
 - Purchase NFT assets published by other users
-- Display the NFT assets I have published and the NFT assets I have purchased on the "My" page
-
-
+- Display the NFT assets I have published and the NFT assets I have purchased on the "My NFTs" page
 
 ### Installation & Start
+
 > you can use yarn or npm too
+
 ##### 1. install packages
+
 ```
 pnpm install
 ```
+
 ##### 2. hardhat configuration
+
 ```
 // hardhat.config.js -- Specific configuration item descriptions are available in the hardhat documentation
 ...
@@ -51,20 +54,28 @@ pnpm install
   }
 ...
 ```
+
 ##### 3. run node by hardhat
+
 ```
 pnpm hardhat node 
 ```
+
 ##### 4. compile & deploy contracts
+
 ```
 pnpm hardhat  run --network localhost .\scripts\deploy.js
 // you can find more details in the hardhat documentation
 ```
+
 ##### 5. start the front-end
+
 ```
 pnpm run dev
 ```
-##### 6. preview 
+
+##### 6. preview
+
 ```
 localhost:3000  //3000 is the default port
 ```
@@ -73,7 +84,6 @@ localhost:3000  //3000 is the default port
 ![发布NFT](./screenshots/发布nft.gif)
 ![购买NFT](./screenshots/购买nft.gif) -->
 
-
 ### 参考
--   [polygon-ethereum-nextjs-marketplace](https://github.com/dabit3/polygon-ethereum-nextjs-marketplace) -  dabit3
 
+- [polygon-ethereum-nextjs-marketplace](https://github.com/dabit3/polygon-ethereum-nextjs-marketplace) -  dabit3
