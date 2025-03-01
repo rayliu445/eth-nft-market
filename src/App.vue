@@ -1,8 +1,9 @@
-<script setup>
+<script setup lang="ts">
 import { computed, ref } from "vue";
 import { useStore } from "vuex";
 import AppHeader from "@/layout/AppHeader.vue";
 import AppLoading from "@/components/loading/AppLoading.vue";
+import AppFooter from './layout/AppFooter.vue'
 
 const store = useStore();
 const loading = computed(() => store.state.loading);
@@ -11,10 +12,11 @@ const loading = computed(() => store.state.loading);
 <template>
   <div>
     <AppHeader />
-    <main class="w-full min-h-screen">
+    <main class="w-full min-h-screen pt-16">
       <router-view />
     </main>
     <AppLoading v-if="loading" />
+    <AppFooter />
   </div>
 </template>
 
@@ -22,3 +24,4 @@ const loading = computed(() => store.state.loading);
 #app-body {
 }
 </style>
+

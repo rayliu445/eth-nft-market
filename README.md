@@ -22,14 +22,18 @@
 - 购买其余用户发布的 NFT 资产
 - 在“我的”页面进行展示我发布过的 NFT 资产以及我购得的 NFT 资产
 
-
 ### 启动流程
+
 > 这里用的包管理工具为pnpm，也可以用yarn或npm
+
 ##### 1. 安装依赖
+
 ```
 pnpm install
 ```
+
 ##### 2. 配置hardhat
+
 ```
 // hardhat.config.js 具体配置项说明可查看hardhat文档
 ...
@@ -50,27 +54,33 @@ pnpm install
   }
 ...
 ```
+
 ##### 3. 通过hardhat启动节点
+
 ```
 pnpm hardhat node 
 ```
+
 ##### 4. 编译&发布合约
+
 ```
-pnpm hardhat  run --network localhost .\scripts\deploy.js
+pnpm hardhat  run --network localhost ./scripts/deploy.js
 // 其中deploy.js中相关细节可查看hardhat文档
 ```
+
 ##### 5. 启动前端页面服务
+
 ```
 pnpm run dev
 ```
+
 ##### 6. 访问本地端口进行测试 默认的地址为localhost:3000
 
 ### 演示
+
 ![发布NFT](./screenshots/发布nft.gif)
 ![购买NFT](./screenshots/购买nft.gif)
 
-
 ### 参考
--   [polygon-ethereum-nextjs-marketplace](https://github.com/dabit3/polygon-ethereum-nextjs-marketplace) -  dabit3
 
-
+- [polygon-ethereum-nextjs-marketplace](https://github.com/dabit3/polygon-ethereum-nextjs-marketplace) -  dabit3

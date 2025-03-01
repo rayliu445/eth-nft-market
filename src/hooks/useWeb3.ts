@@ -66,7 +66,7 @@ export async function createNFT(
   const tokenId = value.toNumber();
   const price = ethers.utils.parseUnits(inputPrice, "ether");
 
-  // 之后把该NFT商品商家岛market
+  // 之后把该NFT商品上架到market
   const martketContract = await getMarketContract();
   const publishPirice = await martketContract.getListingPrice();
   transaction = await martketContract.createMarketItem(
