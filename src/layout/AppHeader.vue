@@ -15,11 +15,41 @@
           <router-link to="/gallery" class="block">Marketplace</router-link>
         </li>
       </ul>
-      <ul class="flex items-center py-3 pr-3 md:pr-12 xl:pr-48">
-        <!-- <li class="btn btn-indigo btn-sm sm:btn-md">登录</li> -->
-      </ul>
+      <div class="pr-3 md:pr-12 xl:pr-48">
+        <button v-if="!isConnected" 
+                @click="openWalletModal"
+                class="btn btn-primary btn-sm md:btn-md gap-2 bg-violet-600 hover:bg-violet-700 border-none">
+          <i class="fas fa-wallet"></i>
+          Connect Wallet
+        </button>
+        <button v-else
+                @click="openAccountModal" 
+                class="btn btn-ghost btn-sm md:btn-md text-white gap-2">
+          <i class="fas fa-circle text-green-400 text-xs"></i>
+          {{ shortAddress }}
+        </button>
+      </div>
     </div>
   </header>
 </template>
 
-<script setup></script>
+<script setup lang="ts">
+import { useWallet } from '@/hooks/useWallet'
+
+const { 
+  isConnected, 
+  shortAddress, 
+  connect: openWalletModal, 
+  disconnect 
+} = useWallet()
+
+const openAccountModal = () => {
+  disconnect()
+}
+</script>
+
+<style scoped>
+.btn {
+  text-transform: none;
+}
+</style>

@@ -69,9 +69,9 @@ pnpm run dev
 localhost:3000  //3000 is the default port
 ```
 
-### 演示
+<!-- ### 演示
 ![发布NFT](./screenshots/发布nft.gif)
-![购买NFT](./screenshots/购买nft.gif)
+![购买NFT](./screenshots/购买nft.gif) -->
 
 
 ### 参考
