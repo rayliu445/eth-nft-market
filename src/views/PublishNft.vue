@@ -145,7 +145,7 @@
       type="file"
       class="hidden"
       ref="fileInput"
-      @click="(e:Event)=>{
+      @click="(e : Event)=>{
     (e.target as HTMLInputElement).value = ''}"
       @change="chooseFile"
       accept="image/*,.txt"

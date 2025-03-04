@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, ref } from "vue";
+import { computed } from "vue";
 import { useStore } from "vuex";
 import AppHeader from "@/layout/AppHeader.vue";
 import AppLoading from "@/components/loading/AppLoading.vue";
@@ -21,7 +21,9 @@ const loading = computed(() => store.state.loading);
 </template>
 
 <style scoped>
+/* Styles will be added later */
 #app-body {
+  /* placeholder */
 }
 </style>
 

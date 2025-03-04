@@ -48,6 +48,11 @@ const openAccountModal = () => {
 }
 </script>
 
+<script lang="ts">
+export default {
+  name: 'AppHeader'
+}
+</script>
 <style scoped>
 .btn {
   text-transform: none;
