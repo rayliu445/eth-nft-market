@@ -18,8 +18,9 @@
       <div class="mb-16">
         <h2 class="text-2xl font-bold mb-6">Trending</h2>
         <div class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-4">
-          <div v-for="nft in trendingNFTs" :key="nft.id" 
-               class="group bg-base-100 rounded-3xl overflow-hidden transform transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+          <div v-for="nft in trendingNFTs" :key="nft.id"
+               class="group bg-base-100 rounded-3xl overflow-hidden transform transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
+               @click="goToNftDetail(nft.id)">
             <!-- 图片区域 -->
             <div class="relative">
               <img :src="nft.image" :alt="nft.name" 
@@ -92,6 +93,12 @@
 </template>
 
 <script setup lang="ts">
+import { useRouter } from 'vue-router';
+
+const router = useRouter();
+const goToNftDetail = (id: number) => {
+  router.push({ name: 'NftDetail', params: { id } });
+};
 // 更新 trendingNFTs 数据，添加第9个 NFT，并调整图片来源
 const trendingNFTs = [
   {

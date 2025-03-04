@@ -39,7 +39,7 @@ export default defineComponent({
 })
 </script>
 
-<style lang="scss" scoped>
+<style lang="less" scoped>
 .trade-record {
     border: 1px solid #ddd;
     padding: 16px;

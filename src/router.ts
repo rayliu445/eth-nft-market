@@ -25,6 +25,12 @@ const routes = [
     meta: { title: "Publish" },
     component: () => import("./views/PublishNft.vue"),
   },
+  {
+    path: "/nft/:id",
+    name: "NftDetail",
+    meta: { title: "NFT Detail" },
+    component: () => import("./views/NftDetail.vue"),
+  },
   { path: "/:path(.*)", component: () => import("./views/NotFound.vue") },
 ];
 

@@ -33,7 +33,7 @@ export default defineComponent({
 })
 </script>
 
-<style lang="scss" scoped>
+<style lang="less" scoped>
 .owner-info {
   margin-top: 16px;
   

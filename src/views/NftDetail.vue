@@ -1,5 +1,5 @@
 <template>
-  <div class="nft-detail-container">
+  <div class="nft-detail-container bg-gradient-to-b from-violet-50 to-purple-50 min-h-screen">
     <button class="back-button" @click="$router.go(-1)">
       ← 返回
     </button>
@@ -42,7 +42,8 @@ export default defineComponent({
         id: 1,
         name: '示例 NFT',
         description: '这是一个示例 NFT 用于展示',
-        image: '/assets/images/empty.png'
+        image: 'https://i.seadn.io/gae/7B0qai02OdHA8P_EOVK672qUliyjQdQDGNrACxs7WnTgZAkJa_wWURnIFKeOh5VTf8cfTqW3wQpozGedaC9mteKphEOtztls02RlWQ?auto=format&w=1000',
+        price: '1.0 ETH'
       },
       tradeRecords: [],
       owner: {
@@ -54,10 +55,8 @@ export default defineComponent({
 })
 </script>
 
-<style lang="scss" scoped>
+<style lang="less" scoped>
 .nft-detail-container {
-  max-width: 1200px;
-  margin: 0 auto;
   padding: 20px;
   
   .back-button {
